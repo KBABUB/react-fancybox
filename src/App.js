@@ -31,8 +31,8 @@ function App() {
     <div className="App">
       <FancyBox galleryImages={images} imgKey='image' imgHeight='200' imgWidth='200' interval='3000' />
 
-<hr />
-      <FancyBox galleryImages={imagesOO} imgHeight='200' imgWidth='200' />
+{/* <hr /> */}
+      {/* <FancyBox galleryImages={imagesOO} imgHeight='200' imgWidth='200' /> */}
     </div>
   );
 }

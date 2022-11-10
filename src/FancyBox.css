@@ -71,6 +71,12 @@
     flex:4;
 }
 
+.fb-overlay__content--img img {
+    max-width: 100%;
+}
+
+
+
 .img-fadeIn {
     animation: fadeIn 3s;
 }

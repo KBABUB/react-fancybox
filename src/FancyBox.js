@@ -22,6 +22,7 @@ function FancyBox({galleryImages, imgKey, imgHeight, imgWidth, interval}) {
 
     function closeImageOverlay(){
         setIsOpenImageOverlay(false);
+        pausePlayImages();
     }
 
     function nextImage(indx) {
@@ -53,15 +54,16 @@ function FancyBox({galleryImages, imgKey, imgHeight, imgWidth, interval}) {
 
     useEffect(() => {
         if(isPlaying) {
-            playImg = window.setInterval(() => {
-            if(imageGallery.length >= currentImgIndx) {
+            playImg = setInterval(() => {
+                console.log(currentImgIndx);
+            if(imageGallery.length > currentImgIndx) {
                setCurrentImgIndx(preIndx=>preIndx + 1);
             }
             else {
                 setCurrentImgIndx(1);
             }
             }, timeInterval ? timeInterval: 4000);
-            return () => window.clearTimeout(playImg);
+            return () => clearTimeout(playImg);
         }
       }, [isPlaying, currentImgIndx]);
     
