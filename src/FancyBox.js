@@ -1,6 +1,5 @@
 import './FancyBox.css';
 import { useEffect, useState } from "react";
-import { clear } from '@testing-library/user-event/dist/clear';
 
 function FancyBox({galleryImages, imgKey, imgHeight, imgWidth, interval}) {
     const [imageGallery, setImageGallery] = useState(galleryImages);
